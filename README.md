@@ -38,6 +38,8 @@ Concept
 
 ### Prediction Result
 ![Result](screenshots/result.png)
+
+
 ---
 
 ## Example Output
