@@ -37,7 +37,7 @@ Concept
 
 
 ### Prediction Result
-![Result](screenshots/result.png)
+![Result](Screenshots/result.png)
 
 ---
 
