@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Semi-Dark Theme - "Midnight Lab" */
+
+    /* Base - Deep Slate/Charcoal (Not Black) */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    /* Cards - Slightly lighter slate for depth */
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 33% 17%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary - Electric Blue (High contrast against dark) */
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+
+    /* Secondary - Muted Blue-Grey */
+    --secondary: 217 33% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted */
+    --muted: 217 33% 25%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Accent - Neon Cyan (Tech feel) */
+    --accent: 180 100% 50%;
+    --accent-foreground: 222 47% 11%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders */
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    --font-heading: 'Outfit', sans-serif;
+    --font-sans: 'Inter', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Aurora Gradient Background - Dark Mode Version */
+    background-color: hsla(var(--background));
+    background-image:
+      radial-gradient(at 0% 0%, hsla(var(--primary), 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(var(--accent), 0.10) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(var(--primary), 0.10) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(var(--accent), 0.15) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, hsla(260, 100%, 65%, 0.1) 0px, transparent 50%);
+    /* Violet glow */
+    background-size: 180% 180%;
+    animation: aurora 20s ease infinite alternate;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, hsla(210, 40%, 98%, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, hsla(210, 40%, 98%, 0.05) 1px, transparent 1px);
+    mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  }
+
+  @keyframes aurora {
+    0% {
+      background-position: 0% 0%;
+    }
+
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+}
