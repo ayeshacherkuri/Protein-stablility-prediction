@@ -35,8 +35,6 @@ Concept
 ---
 ## Screenshots
 
-### Input Page
-![Input](screenshots/input.png)
 
 ### Prediction Result
 ![Result](screenshots/result.png)
